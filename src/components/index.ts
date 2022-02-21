@@ -1,3 +1,4 @@
 import Header from './Header';
+import ActiveLink from './ActiveLink';
 
-export { Header }
+export { Header, ActiveLink };
