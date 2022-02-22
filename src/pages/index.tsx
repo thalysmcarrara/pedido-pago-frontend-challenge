@@ -1,6 +1,6 @@
 import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
-import { Container, Hero } from './style.home';
+import { Container, Hero } from './style';
 import { ActiveLink, SearchBar, EmployeeTable } from '../components';
 import { api } from '../services/api';
 import { Employee } from '../types';
