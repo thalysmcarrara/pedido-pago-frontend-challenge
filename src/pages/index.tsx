@@ -1,8 +1,15 @@
+import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
 import { Container, Hero } from './style.home';
-import { ActiveLink, SearchBar } from '../components';
+import { ActiveLink, SearchBar, EmployeeTable } from '../components';
+import { api } from '../services/api';
+import { Employee } from '../types';
 
-export default function Home() {
+interface HomeProps {
+  employees: Employee[]
+}
+
+export default function Home({ employees }: HomeProps) {
   const { asPath } = useRouter();
 
   return (
@@ -15,7 +22,35 @@ export default function Home() {
           </nav>
 
           <SearchBar />
+
+          <h2>Listagem de colaboradores</h2>
+          
+          <EmployeeTable employees={employees}/>
+        
         </Hero>
       </Container>
   )
 }
+
+export const getServerSideProps: GetServerSideProps = async (_context) => {
+
+  try {
+    const result = await api.get('/agents').then((response) => response.data)
+
+    return {
+      props: {
+        employees: result.items
+      }
+    }
+  } catch {
+    return {
+      props: {
+        employees: []
+      }
+    }
+  }
+  
+
+  
+}
+

@@ -3,9 +3,10 @@ import { shade } from 'polished';
 
 
 export const Container = styled.main`
-  height: calc(100vh - 61px);
+  /* height: calc(100vh - 61px); */
   max-width: 956px;
-  margin: 0 auto;
+  /* margin: 61px auto 0 auto; */
+  margin: 0 auto 3rem auto;
 
   h1 {
     font-weight: 600;
@@ -24,7 +25,8 @@ export const Hero = styled.section`
   filter: drop-shadow(2px 2px 4px ${shade(0.16, '#A5ABB3')});
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2.5rem;
+  border-bottom: 2.5rem;
 
   nav {
     height: 2.5rem;
