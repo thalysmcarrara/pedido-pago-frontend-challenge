@@ -1,6 +1,11 @@
 import styled from "styled-components";
 
 export const Container = styled.header`
+  width: 100%;
+  position: sticky;
+  z-index: 999;
+  top: 0;
+  left: 0;
   display: flex;
   background: var(--white);
   height: 61px;
