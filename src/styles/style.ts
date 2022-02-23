@@ -10,6 +10,10 @@ export const Container = styled.main`
   max-width: 956px;
   margin: 0 auto 3rem auto;
 
+  @media screen and (max-width: 1000px) {
+    padding: 0 1.5rem;
+  }
+
   h1 {
     font-weight: 600;
     line-height: 2rem;
