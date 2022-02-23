@@ -21,13 +21,13 @@ export default function Home({ employees }: HomeProps) {
             <ActiveLink name='Cargos' href='/cargos' actualPath={asPath}/>
           </nav>
 
-          <SearchBar />
+          <SearchBar placeholderTextSearch='nome ou cpf'/>
 
           <h2>Listagem de colaboradores</h2>
           
           <EmployeeTable employees={employees}/>
 
-          <PaginationContainer>
+          <PaginationContainer justifyContent='space-between'>
             <ItemsPerPage />
             <PaginationHandler />
           </PaginationContainer>

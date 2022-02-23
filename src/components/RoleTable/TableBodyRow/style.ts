@@ -1,17 +1,12 @@
 import styled from 'styled-components';
 
-export const TableBodyRowActive = styled.tr`
+export const TableRow = styled.tr`
   color: var(--black-100);
 
   td:first-child {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-
-    img {
-      height: 32px;
-      border-radius: 50%;
-    }
 
     span {
       max-width: 120px;
@@ -40,9 +35,4 @@ export const TableBodyRowActive = styled.tr`
       color: var(--black-100);
     }
   }
-`
-
-export const TableBodyRowInactive = styled(TableBodyRowActive)`
-  color: var(--gray-400);
-  filter: grayscale(1)
 `

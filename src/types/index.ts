@@ -7,3 +7,9 @@ export interface Employee {
   status: string,
   image: string,
 }
+
+export interface role {
+  name: string,
+  departament: string,
+  agents_quantity: number
+}
