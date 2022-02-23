@@ -33,6 +33,7 @@ export const PopoverContainer = styled.div`
     height: 50%;
     border: none;
     color: var(--black-100);
+    font-weight: 500;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -56,9 +57,12 @@ export const PopoverContainer = styled.div`
   button:last-child {
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
+    color: var(--gray-200);
+    pointer-events: none;
 
     svg {
       transform: scale(1.5);
+      color: var(--gray-200);
     }
   }
 `
