@@ -63,8 +63,13 @@ export const Dropdown = styled.div<DropdownProps>`
     }
   }
 
+  div:first-child {
+      border-radius: 0.5rem 0.5rem 0 0;
+    }
+
   div:last-child {
     border-bottom: none;
+    border-radius: 0 0 0.5rem 0.5rem;
   }
 
   div:hover {
