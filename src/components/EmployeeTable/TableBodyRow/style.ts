@@ -34,6 +34,7 @@ export const TableBodyRowActive = styled.tr`
   }
 
   td:last-child {
+    text-align: end;
     svg {
       transform: scale(2);
       color: var(--black-100);

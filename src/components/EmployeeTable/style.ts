@@ -31,28 +31,3 @@ export const TableContainer = styled.table`
     border-top-right-radius: 0.5rem;
   }
 `
-
-export const TableBodyRowActive = styled.tr`
-  color: var(--black-100);
-
-  td:first-child {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-
-    img {
-      height: 32px;
-      border-radius: 50%;
-    }
-
-    span {
-      max-width: 120px;
-      font-weight: 600;
-    }
-  }
-`
-
-export const TableBodyRowInactive = styled(TableBodyRowActive)`
-  color: var(--gray-400);
-  filter: grayscale(1)
-`
