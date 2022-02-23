@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 import { shade } from 'polished';
 
+interface PaginationContainerProps {
+  justifyContent: string
+}
+
 
 export const Container = styled.main`
   max-width: 956px;
@@ -40,10 +44,10 @@ export const Hero = styled.section`
   }
 `
 
-export const PaginationContainer = styled.div`
+export const PaginationContainer = styled.div<PaginationContainerProps>`
   width: 100%;
   height: 40px;
   display: flex;
-  justify-content: space-between;
+  justify-content: ${(props) => props.justifyContent};
   align-items: center;
 `

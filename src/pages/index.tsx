@@ -27,7 +27,7 @@ export default function Home({ employees }: HomeProps) {
           
           <EmployeeTable employees={employees}/>
 
-          <PaginationContainer>
+          <PaginationContainer justifyContent='space-between'>
             <ItemsPerPage />
             <PaginationHandler />
           </PaginationContainer>
