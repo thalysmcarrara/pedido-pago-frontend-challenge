@@ -3,9 +3,7 @@ import { shade } from 'polished';
 
 
 export const Container = styled.main`
-  /* height: calc(100vh - 61px); */
   max-width: 956px;
-  /* margin: 61px auto 0 auto; */
   margin: 0 auto 3rem auto;
 
   h1 {
@@ -40,4 +38,12 @@ export const Hero = styled.section`
     line-height: 1rem;
     color: var(--black-600);
   }
+`
+
+export const PaginationContainer = styled.div`
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `
