@@ -1,7 +1,7 @@
 import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
-import { Container, Hero } from '../styles/style';
-import { ActiveLink, SearchBar, EmployeeTable } from '../components';
+import { Container, Hero, PaginationContainer } from '../styles/style';
+import { ActiveLink, SearchBar, EmployeeTable, PaginationHandler, ItemsPerPage } from '../components';
 import { api } from '../services/api';
 import { Employee } from '../types';
 
@@ -26,14 +26,17 @@ export default function Home({ employees }: HomeProps) {
           <h2>Listagem de colaboradores</h2>
           
           <EmployeeTable employees={employees}/>
-        
+
+          <PaginationContainer>
+            <ItemsPerPage />
+            <PaginationHandler />
+          </PaginationContainer>
         </Hero>
       </Container>
   )
 }
 
 export const getServerSideProps: GetServerSideProps = async (_context) => {
-
   try {
     const result = await api.get('/agents').then((response) => response.data)
 
@@ -49,8 +52,5 @@ export const getServerSideProps: GetServerSideProps = async (_context) => {
       }
     }
   }
-  
-
-  
 }
 
