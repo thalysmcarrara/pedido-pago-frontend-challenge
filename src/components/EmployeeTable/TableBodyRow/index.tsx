@@ -3,6 +3,7 @@ import { MdMoreVert } from 'react-icons/md'
 import { TableBodyRowActive, TableBodyRowInactive } from './style';
 import EmployeePopover from '../EmployeePopover';
 import { Employee } from '../../../types';
+import { useRouter } from 'next/router';
 
 interface TableBodyRowProps {
   isActive: string
@@ -32,7 +33,7 @@ export default function TableBodyRow({ employee, isActive }: TableBodyRowProps) 
           </td>
           <td>
             <MdMoreVert onClick={() => setIsOpenPopover(!isOpenPopOver)}/>
-            {isOpenPopOver ? <EmployeePopover onRequestClose={onRequestClose} /> : ''}
+            {isOpenPopOver ? <EmployeePopover  employeeId={employee.agent_id} onRequestClose={onRequestClose} /> : ''}
           </td>
         </TableBodyRowActive> :
         <TableBodyRowInactive>
