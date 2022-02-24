@@ -35,10 +35,17 @@ export const TableBodyRowActive = styled.tr`
 
   td:last-child {
     text-align: end;
+    position: relative;
+
     svg {
       transform: scale(2);
       color: var(--black-100);
     }
+
+    /* button {
+      border: none;
+      background: var(--white);
+    } */
   }
 `
 

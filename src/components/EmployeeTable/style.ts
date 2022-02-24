@@ -11,7 +11,6 @@ export const TableContainer = styled.table`
 
   td{ 
     padding: 1rem;
-    
   }
 
   th, td {
