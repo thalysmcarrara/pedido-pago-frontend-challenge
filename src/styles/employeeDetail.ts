@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { shade } from 'polished';
-import { deviceWidth } from '../../styles/style';
+import { deviceWidth } from './style';
 
 const { desktop, mobile, tablet } = deviceWidth;
 

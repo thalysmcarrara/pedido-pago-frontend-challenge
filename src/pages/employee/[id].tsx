@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { MdArrowBack, MdOutlineBadge } from 'react-icons/md'
 import { FiUser, FiPhoneCall, FiCalendar } from 'react-icons/fi';
 import { api } from '../../services/api';
-import { Container, Hero, ProfileContainer, PersonalCardContainer, DataOrgContainer } from './style';
+import { Container, Hero, ProfileContainer, PersonalCardContainer, DataOrgContainer } from '../../styles/employeeDetail';
 import { EmployeeDetailCard } from '../../components';
 
 interface EmployeeProps {
