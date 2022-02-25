@@ -1,11 +1,15 @@
 import styled from "styled-components";
+import { deviceWidth } from '../../styles/style';
+
+const { mobile } = deviceWidth;
 
 export const Container = styled.header`
+  @media only screen and (max-width: ${mobile.maxWidth}) {
+    justify-content: center;
+  }
   width: 100%;
   position: sticky;
   z-index: 999;
-  top: 0;
-  left: 0;
   display: flex;
   background: var(--white);
   height: 61px;
@@ -22,6 +26,16 @@ export const LogoContainer = styled.div`
 `
 
 export const UserInfoContainer = styled.div`
+
+  @media only screen and (max-width: ${mobile.maxWidth}) {
+    position: absolute;
+    left: 0;
+    margin-left: 1rem;
+    padding: 0;
+    width: auto;
+    border-left: none;
+  }
+
   display: grid;
   height: 100%;
   width: 219px;
@@ -32,38 +46,51 @@ export const UserInfoContainer = styled.div`
   align-items: center;
   justify-content: center;
 
-  div:first-child {
-    height: 32px;
-    width: 32px;
-    display: flex;
-    background: var(--cyan-100);
-    border-radius: 50%;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-  }
+  div {
+    &.avatar-container {
+      height: 32px;
+      width: 32px;
+      display: flex;
+      background: var(--cyan-100);
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
 
-  div + div {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    border-radius: 0;
-    align-items: baseline;
-    justify-content: center;
-
-    strong {
-      font-weight: 600;
-      font-size: 0.94rem;
-      line-height: 0.94rem;
-      color: var(--black-600);
+      span {
+        font-size: 0.875rem;
+        line-height: 0.875rem;
+        color: var(--black-600);
+      }
     }
 
-    span {
-      font-weight: 400;
-      font-size: 0.8rem;
-      line-height: 0.96rem;
-      color: var(--black-100);
+    &.name-container {
+
+      @media only screen and (max-width: ${mobile.maxWidth}) {
+        display: none;
+      }
+
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+      border-radius: 0;
+      align-items: baseline;
+      justify-content: center;
+
+      strong {
+        font-weight: 600;
+        font-size: 0.94rem;
+        line-height: 0.94rem;
+        color: var(--black-600);
+      }
+
+      span {
+        font-weight: 400;
+        font-size: 0.8rem;
+        line-height: 0.96rem;
+        color: var(--black-100);
+      }
     }
   }
 `
