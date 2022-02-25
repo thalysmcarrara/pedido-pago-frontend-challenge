@@ -24,15 +24,16 @@ export const PopoverContainer = styled.div`
     }
   }
 
-  button:hover {
+  button:hover, a:hover {
     background: var(--gray-100);
   }
 
-  button {
+  button, a {
     width: 100%;
     height: 50%;
     border: none;
     color: var(--black-100);
+    font-size: 1rem;
     font-weight: 500;
     display: flex;
     justify-content: flex-start;
@@ -49,10 +50,10 @@ export const PopoverContainer = styled.div`
     }
   }
 
-  button:first-child {
+  /* button:first-child {
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
-  }
+  } */
 
   button:last-child {
     border-bottom-left-radius: 0.5rem;

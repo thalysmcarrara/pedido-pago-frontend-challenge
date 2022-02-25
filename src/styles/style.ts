@@ -1,6 +1,35 @@
 import styled from 'styled-components';
 import { shade } from 'polished';
 
+type DeviceViewPortLength = {
+  minWidth: string,
+  maxWidth?: string
+}
+interface DeviceWidth {
+  mobile: DeviceViewPortLength
+  tablet: DeviceViewPortLength
+  desktop: DeviceViewPortLength
+  desktopWide: DeviceViewPortLength
+}
+
+export const deviceWidth: DeviceWidth = {
+  mobile: {
+    minWidth: '300px',
+    maxWidth: '414px'
+  },
+  tablet: {
+    minWidth: '415px',
+    maxWidth: '830px'
+  },
+  desktop: {
+    minWidth: '831px',
+    maxWidth: '1920px'
+  },
+  desktopWide: {
+    minWidth: '1921px'
+  }
+}
+
 interface PaginationContainerProps {
   justifyContent: string
 }

@@ -5,6 +5,7 @@ import EmployeeTable from './EmployeeTable';
 import PaginationHandler from './PaginationHandler';
 import ItemsPerPage from './ItemsPerPage';
 import RoleTable from './RoleTable';
+import EmployeeDetailCard from './EmployeeDetailCard';
 
 export {
   Header,
@@ -14,4 +15,5 @@ export {
   PaginationHandler,
   ItemsPerPage,
   RoleTable,
+  EmployeeDetailCard,
 };

@@ -32,7 +32,7 @@ export default function TableBodyRow({ employee, isActive }: TableBodyRowProps) 
           </td>
           <td>
             <MdMoreVert onClick={() => setIsOpenPopover(!isOpenPopOver)}/>
-            {isOpenPopOver ? <EmployeePopover onRequestClose={onRequestClose} /> : ''}
+            {isOpenPopOver ? <EmployeePopover  employeeId={employee.agent_id} onRequestClose={onRequestClose} /> : ''}
           </td>
         </TableBodyRowActive> :
         <TableBodyRowInactive>
@@ -48,7 +48,7 @@ export default function TableBodyRow({ employee, isActive }: TableBodyRowProps) 
           </td>
           <td onClick={() => setIsOpenPopover(!isOpenPopOver)}>
             <MdMoreVert/>
-            {isOpenPopOver ? <EmployeePopover onRequestClose={onRequestClose} /> : ''}
+            {isOpenPopOver ? <EmployeePopover  employeeId={employee.agent_id} onRequestClose={onRequestClose} /> : ''}
           </td>
         </TableBodyRowInactive>
         }

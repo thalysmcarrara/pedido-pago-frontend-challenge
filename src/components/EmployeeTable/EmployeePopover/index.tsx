@@ -1,19 +1,30 @@
 import { PopoverContainer } from './style';
 import { MdOutlineVisibility, MdClose } from 'react-icons/md';
 import { FaRegTrashAlt } from 'react-icons/fa';
+import Link from 'next/link';
+// import { useRouter } from 'next/router';
 
 interface EmployeePopoverProps {
   onRequestClose: Function
+  employeeId: number 
 }
 
-export default function EmployeePopover({ onRequestClose }: EmployeePopoverProps) {
+export default function EmployeePopover({ onRequestClose, employeeId }: EmployeePopoverProps) {
+
+  // const onNavigate = () => {
+  //   const router = useRouter()
+
+  //   router.push(`/employee/${employeeId}`)
+  // }
   return (
     <PopoverContainer>
       <div onClick={() => onRequestClose()}><MdClose /></div>
-      <button>
-        <MdOutlineVisibility />
-        <span>Ver colaborador</span>
-      </button>
+      <Link href={`/employee/${employeeId}`}>
+        <a>
+          <MdOutlineVisibility />
+          <span>Ver colaborador</span>
+        </a>
+      </Link>
       <button>
         <FaRegTrashAlt />
         <span>Excluir</span>
