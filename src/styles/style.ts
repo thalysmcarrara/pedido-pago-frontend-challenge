@@ -14,7 +14,7 @@ interface DeviceWidth {
 
 export const deviceWidth: DeviceWidth = {
   mobile: {
-    minWidth: '320px',
+    minWidth: '300px',
     maxWidth: '414px'
   },
   tablet: {

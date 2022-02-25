@@ -16,12 +16,16 @@ export const Container = styled.main`
     padding: 0 1rem;
   }
 
-  @media only screen and (min-width: ${mobile.minWidth}) and (max-width: ${mobile.maxWidth}) {
+  @media only screen and (max-width: ${mobile.maxWidth}) {
     padding: 0 0.5rem;
 
-    div.title-container a {
-      height: 1.8rem;
-      width: 1.8rem;
+    div {
+      &.title-container {
+        a {
+          height: 1.6rem;
+          width: 1.6rem;
+        }
+      }
     }
   }
 
@@ -30,6 +34,11 @@ export const Container = styled.main`
     line-height: 2rem;
     font-size: 2rem;
     color: var(--black-600);
+
+    @media only screen and (max-width: ${mobile.maxWidth}) {
+        font-size: 1.25rem;
+        line-height: 1.45rem;
+      }
   }
 
   div {
@@ -53,8 +62,8 @@ export const Container = styled.main`
           color: var(--black-600);
         }
       }
-    }
   }
+}
 `
 
 export const Hero = styled.section`
@@ -88,11 +97,30 @@ export const ProfileContainer = styled.div`
   align-items: center;
   gap: 1.5rem;
 
-  @media only screen and (min-width: 320px) and (max-width:414px) {
-    
+  @media only screen and (max-width: ${mobile.maxWidth}) {
+    gap: 1rem;
   }
 
   div {
+    &.profile-image {
+      height: 5rem;
+      width: 5rem;
+      border-radius: 50%;
+      border: 3px solid var(--black-100);
+      display: flex;
+      overflow: hidden;
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      @media only screen and (max-width: ${mobile.maxWidth}) {
+        height: 3rem;
+        width: 3rem;
+      }
+    }
+
     &.image-container {
       height: 5rem;
       width: 5rem;
@@ -104,6 +132,11 @@ export const ProfileContainer = styled.div`
       svg {
         transform: scale(2);
         color: var(--black-100);
+      }
+
+      @media only screen and (max-width: ${mobile.maxWidth}) {
+        height: 3rem;
+        width: 3rem;
       }
     }
 
@@ -196,6 +229,38 @@ export const PersonalCardContainer = styled.div`
     div {
       &.card-info {
         height: 4.4rem;
+      }
+    }
+  }
+`
+
+export const DataOrgContainer = styled.div`
+  margin-top: 2rem;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 2px solid var(--gray-100);
+
+  h2 {
+    margin-top: 0;
+  }
+
+  div {
+    &.dropdown-container {
+      margin-top: 1.2rem;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+  }
+
+  @media only screen and (max-width: ${tablet.maxWidth}) {
+    div {
+      &.dropdown-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 56px);
       }
     }
   }
