@@ -1,7 +1,6 @@
 import { Container, LogoContainer, UserInfoContainer } from './style';
 import Image from 'next/image';
 import logo from '../../../public/images/logo.svg'
-import avatar from '../../../public/images/avatar.svg'
 
 export default function Header() {
   return (
@@ -11,7 +10,6 @@ export default function Header() {
       </LogoContainer>
       <UserInfoContainer>
         <div className='avatar-container'>
-          {/* <Image src={avatar} /> */}
           <span>LZ</span>
         </div>
         <div className='name-container'>
