@@ -1,6 +1,11 @@
 import styled from 'styled-components';
+import { deviceWidth } from '../../styles/style';
 
 export const PaginationHandlerContainer = styled.div`
+  @media only screen and (max-width: ${deviceWidth.tablet.maxWidth}) {
+      display: none;
+  }
+
   span {
     font-weight: 600;
     font-size: 1rem;
@@ -16,7 +21,6 @@ export const ArrowButtonLeft = styled.button`
     text-align: center;
     vertical-align: middle;
     
-
     border-top-left-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
 

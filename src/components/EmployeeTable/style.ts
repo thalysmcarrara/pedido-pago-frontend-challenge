@@ -1,6 +1,13 @@
 import styled from 'styled-components';
+import { deviceWidth } from '../../styles/style';
+
+const { tablet } = deviceWidth;
 
 export const TableContainer = styled.table`
+  @media only screen and (max-width: ${tablet.maxWidth}) {
+    display: none;
+  }
+
   text-align: left;
 
   th {
