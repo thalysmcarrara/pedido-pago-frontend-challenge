@@ -11,7 +11,9 @@ export default function ActiveLinkMobile() {
         <MdClose className='control-close-icon'/>
       </summary>
       <DropdownContent className='control-expand'>
-        <a href=""><span>Cargos</span></a>
+        <Link href="/cargos">
+          <a><span>Cargos</span></a>
+        </Link>
       </DropdownContent>
     </SelectContainer>
   )
