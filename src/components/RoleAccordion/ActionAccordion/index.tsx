@@ -1,7 +1,6 @@
 import { ActionAccordionContainer } from './style';
 import { FiFilePlus, FiRepeat } from 'react-icons/fi';
 import { MdOutlineVisibility, MdClose } from 'react-icons/md';
-import { FaRegTrashAlt } from 'react-icons/fa';
 import { BiEdit } from 'react-icons/bi';
 import { BsLayers } from 'react-icons/bs';
 import Link from 'next/link';
