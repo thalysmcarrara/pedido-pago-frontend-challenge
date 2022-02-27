@@ -14,7 +14,7 @@ export interface Role {
   agents_quantity: number
 }
 
-type GroupRule = {
+export type GroupRule = {
   role: string,
   permissions: string[]
 }
@@ -22,6 +22,5 @@ type GroupRule = {
 export interface RoleDetailType {
   name: string,
   department: string,
-    "grouprules": GroupRule[]
-
+  grouprules: GroupRule[]
 }

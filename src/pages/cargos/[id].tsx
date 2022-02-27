@@ -1,12 +1,13 @@
 import { GetServerSideProps } from 'next';
 import Link from 'next/link';
 import { Container, Hero } from '../../styles/roleDetail';
+import { RolePermissionsTable } from '../../components'
 import { MdArrowBack } from 'react-icons/md'
 import { api } from '../../services/api';
 import { RoleDetailType } from '../../types';
 
 interface RoleDetailProps {
-  role: RoleDetailType[]
+  role: RoleDetailType
 }
 
 export default function RoleDetail({ role }: RoleDetailProps) {
@@ -34,18 +35,19 @@ export default function RoleDetail({ role }: RoleDetailProps) {
           </div>
 
           <h2 className="gap">Listagem de permisões</h2>
+
+          <RolePermissionsTable roles={role.grouprules}/>
         </Hero>
       </Container>
   )
 }
 
-export const getServerSideProps: GetServerSideProps = async ({ req, params }) => {
+export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const { id }: any = params
-  console.log(id)
-  console.log(req)
+
   try {
     const result = await api.get(`/role/${id}`).then((response) => response.data)
-    console.log(result)
+
     return {
       props: {
         role: result.role
