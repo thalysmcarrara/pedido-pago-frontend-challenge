@@ -68,6 +68,22 @@ export const ActionAccordionContainer = styled.div`
           padding: 8px 24px;
           border-top: 1px solid var(--gray-100);
 
+          &.disabled {
+            span {
+              color: var(--gray-200);
+            }
+          }
+
+          &.enabled {
+            svg {
+              color: var(--black-100);
+            }
+
+            span {
+              color: var(--black-100);
+            }
+          }
+
           svg {
             transform: scale(1.5);
             color: var(--gray-200);
