@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { deviceWidth } from '../../styles/style';
 
 
 interface LinkContainerProps {
@@ -7,6 +8,9 @@ interface LinkContainerProps {
 }
 
 export const LinkContainer = styled.div<LinkContainerProps>`
+  @media only screen and (max-width: ${deviceWidth.mobile.maxWidth}) {
+      display: none;
+  }
   height: 100%;
   width: 13rem;
   /* border-color: var(--cyan-300);

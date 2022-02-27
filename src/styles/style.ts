@@ -39,7 +39,11 @@ export const Container = styled.main`
   max-width: 956px;
   margin: 0 auto 3rem auto;
 
-  @media screen and (max-width: 1000px) {
+  @media only screen and (max-width: ${deviceWidth.mobile.maxWidth}) {
+    padding: 0 .25rem;
+  }
+
+  @media screen and (min-width: ${deviceWidth.tablet.minWidth}) and (max-width: 1000px) {
     padding: 0 1.5rem;
   }
 
@@ -53,6 +57,11 @@ export const Container = styled.main`
 `
 
 export const Hero = styled.section`
+
+  @media only screen and (max-width: ${deviceWidth.mobile.maxWidth}) {
+    padding: 2.5rem 1rem;
+  }
+
   width: 100%;
   padding: 2.5rem 1.6rem;
   background: var(--white);
@@ -64,6 +73,10 @@ export const Hero = styled.section`
   border-bottom: 2.5rem;
 
   nav {
+    @media only screen and (max-width: ${deviceWidth.mobile.maxWidth}) {
+      display: none;
+    }
+
     height: 2.5rem;
     border-bottom: 2px solid var(--gray-100);
     display: flex;
@@ -78,6 +91,11 @@ export const Hero = styled.section`
 `
 
 export const PaginationContainer = styled.div<PaginationContainerProps>`
+  @media only screen and (min-width: ${deviceWidth.mobile.minWidth}) and (max-width: ${deviceWidth.tablet.maxWidth}) {
+    display: none;
+    height: 0;
+  }
+
   width: 100%;
   height: 40px;
   display: flex;

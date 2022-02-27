@@ -1,7 +1,15 @@
 import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
 import { Container, Hero, PaginationContainer } from '../styles/style';
-import { ActiveLink, SearchBar, EmployeeTable, PaginationHandler, ItemsPerPage } from '../components';
+import {
+  ActiveLink,
+  SearchBar,
+  EmployeeTable,
+  PaginationHandler,
+  ItemsPerPage,
+  ActiveLinkMobile,
+  EmployeeAccordion,
+} from '../components';
 import { api } from '../services/api';
 import { Employee } from '../types';
 
@@ -16,6 +24,10 @@ export default function Home({ employees }: HomeProps) {
       <Container>
         <h1>Organização</h1>
         <Hero>
+          {/* nav mobile */}
+            <ActiveLinkMobile />
+
+          {/* nav desktop */}
           <nav>
             <ActiveLink name="Colaboradores" href='/' actualPath={asPath}/> 
             <ActiveLink name='Cargos' href='/cargos' actualPath={asPath}/>
@@ -24,7 +36,11 @@ export default function Home({ employees }: HomeProps) {
           <SearchBar placeholderTextSearch='nome ou cpf'/>
 
           <h2>Listagem de colaboradores</h2>
-          
+
+          {/* mobile / tablet */}
+          <EmployeeAccordion employees={employees}/>
+
+          {/* desktop */}
           <EmployeeTable employees={employees}/>
 
           <PaginationContainer justifyContent='space-between'>
@@ -47,9 +63,7 @@ export const getServerSideProps: GetServerSideProps = async (_context) => {
     }
   } catch {
     return {
-      props: {
-        employees: []
-      }
+      notFound: true
     }
   }
 }
