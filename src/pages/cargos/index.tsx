@@ -1,21 +1,31 @@
 import { GetServerSideProps} from 'next';
 import { useRouter } from 'next/router';
 import { api } from '../../services/api';
-import { role } from '../../types'
-import { ActiveLink, SearchBar, RoleTable, PaginationHandler } from '../../components';
+import { Role } from '../../types';
+import { ActiveLink,
+  ActiveLinkMobile,
+  SearchBar,
+  RoleTable,
+  PaginationHandler,
+  RoleAccordion
+} from '../../components';
 import { Container, Hero, PaginationContainer } from '../../styles/style';
 
 interface RolesProps {
-  roles: role[]
+  roles: Role[]
 }
 
 export default function Roles({ roles }: RolesProps) {
   const { asPath } = useRouter();
-  console.log(roles)
+
   return (
     <Container>
       <h1>Cargos</h1>
       <Hero>
+        {/* mobile nav */}
+        <ActiveLinkMobile currentPageName='Cargos' nextPageName='Colaboradores' nextPageLink='/'/>
+
+        {/* desktop nav */}
         <nav>
           <ActiveLink name="Colaboradores" href='/' actualPath={asPath}/> 
           <ActiveLink name='Cargos' href='/cargos' actualPath={asPath}/>
@@ -25,6 +35,10 @@ export default function Roles({ roles }: RolesProps) {
 
         <h2>Listagem de cargos</h2>
 
+        {/* mobile */}
+        <RoleAccordion roles={roles}/>
+
+        {/* desktop */}
         <RoleTable roles={roles}/>
 
         <PaginationContainer justifyContent='end'>
