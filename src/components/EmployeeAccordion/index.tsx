@@ -10,14 +10,13 @@ interface EmployeeAccordionProps {
 }
 
 export default function EmployeeAccordion({ employees }: EmployeeAccordionProps) {
-  const [employeeToShow, setEmployeeToShow] = useState(employees);
   const [quantityToShow, setQuantityToShow] = useState(5)
 
   const itemsPerPage = 5
 
   const handleEmployeeToShow = () => {
     setQuantityToShow((prevQuantity) => {
-      const diference = employeeToShow.length - prevQuantity
+      const diference = employees.length - prevQuantity
       if(diference === 0) {
         return 5
       }
@@ -33,7 +32,7 @@ export default function EmployeeAccordion({ employees }: EmployeeAccordionProps)
   return (
     <AccordionContainer>
       {
-        employeeToShow.slice(0, quantityToShow).map((employee) => (
+        employees.slice(0, quantityToShow).map((employee) => (
           <details key={employee.agent_id}>
             <summary>
               <div className="summary-content-container">
@@ -80,7 +79,7 @@ export default function EmployeeAccordion({ employees }: EmployeeAccordionProps)
       <ShowMoreButtonContainer onClick={handleEmployeeToShow}>
         <div className="button-content">
           <FiRefreshCcw />
-          <strong>Carregar {employeeToShow.length === quantityToShow ? 'Menos' : 'Mais'}</strong>
+          <strong>Carregar {employees.length === quantityToShow ? 'Menos' : 'Mais'}</strong>
         </div>
       </ShowMoreButtonContainer>
     </AccordionContainer>
