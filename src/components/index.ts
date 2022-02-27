@@ -7,6 +7,7 @@ import ItemsPerPage from './ItemsPerPage';
 import RoleTable from './RoleTable';
 import EmployeeDetailCard from './EmployeeDetailCard';
 import ActiveLinkMobile from './ActiveLinkMobile';
+import EmployeeAccordion from './EmployeeAccordion';
 
 export {
   Header,
@@ -18,4 +19,5 @@ export {
   RoleTable,
   EmployeeDetailCard,
   ActiveLinkMobile,
+  EmployeeAccordion,
 };

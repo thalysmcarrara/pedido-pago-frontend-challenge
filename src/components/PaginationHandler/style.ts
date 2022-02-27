@@ -1,11 +1,6 @@
 import styled from 'styled-components';
-import { deviceWidth } from '../../styles/style';
 
 export const PaginationHandlerContainer = styled.div`
-  @media only screen and (max-width: ${deviceWidth.tablet.maxWidth}) {
-      display: none;
-  }
-
   span {
     font-weight: 600;
     font-size: 1rem;

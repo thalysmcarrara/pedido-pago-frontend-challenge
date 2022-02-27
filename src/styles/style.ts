@@ -91,6 +91,11 @@ export const Hero = styled.section`
 `
 
 export const PaginationContainer = styled.div<PaginationContainerProps>`
+  @media only screen and (min-width: ${deviceWidth.mobile.minWidth}) and (max-width: ${deviceWidth.tablet.maxWidth}) {
+    display: none;
+    height: 0;
+  }
+
   width: 100%;
   height: 40px;
   display: flex;
