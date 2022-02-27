@@ -3,16 +3,37 @@ import { FiRefreshCcw } from 'react-icons/fi';
 import { AccordionContainer, ShowMoreButtonContainer } from './style';
 import ActionAccordion from './ActionAccordion';
 import { Employee } from '../../types';
+import { useState } from 'react';
 
 interface EmployeeAccordionProps {
   employees: Employee[]
 }
 
 export default function EmployeeAccordion({ employees }: EmployeeAccordionProps) {
+  const [employeeToShow, setEmployeeToShow] = useState(employees);
+  const [quantityToShow, setQuantityToShow] = useState(5)
+
+  const itemsPerPage = 5
+
+  const handleEmployeeToShow = () => {
+    setQuantityToShow((prevQuantity) => {
+      const diference = employeeToShow.length - prevQuantity
+      if(diference === 0) {
+        return 5
+      }
+
+      if(diference < 5) {
+        return prevQuantity + diference
+      } else {
+        return prevQuantity + itemsPerPage
+      }
+    })
+  }
+
   return (
     <AccordionContainer>
       {
-        employees.map((employee) => (
+        employeeToShow.slice(0, quantityToShow).map((employee) => (
           <details key={employee.agent_id}>
             <summary>
               <div className="summary-content-container">
@@ -56,10 +77,10 @@ export default function EmployeeAccordion({ employees }: EmployeeAccordionProps)
           </details>
         ))
       }
-      <ShowMoreButtonContainer >
+      <ShowMoreButtonContainer onClick={handleEmployeeToShow}>
         <div className="button-content">
           <FiRefreshCcw />
-          <strong>Carregar Mais</strong>
+          <strong>Carregar {employeeToShow.length === quantityToShow ? 'Menos' : 'Mais'}</strong>
         </div>
       </ShowMoreButtonContainer>
     </AccordionContainer>
