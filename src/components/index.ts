@@ -9,6 +9,7 @@ import EmployeeDetailCard from './EmployeeDetailCard';
 import ActiveLinkMobile from './ActiveLinkMobile';
 import EmployeeAccordion from './EmployeeAccordion';
 import RoleAccordion from './RoleAccordion';
+import RolePermissionsTable from './RolePermissionsTable';
 
 export {
   Header,
@@ -22,4 +23,5 @@ export {
   ActiveLinkMobile,
   EmployeeAccordion,
   RoleAccordion,
+  RolePermissionsTable,
 };
