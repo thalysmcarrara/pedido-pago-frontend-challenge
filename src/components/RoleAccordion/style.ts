@@ -14,11 +14,14 @@ export const AccordionContainer = styled.section`
   }
 
   details {
-    width: 100%;
-    min-height: 65px;
-    border: 2px solid var(--gray-100);
-    border-radius: 0.5rem;
-    padding: 1rem;
+    &.details-parent {
+      width: 100%;
+      min-height: 65px;
+      border: 2px solid var(--gray-100);
+      border-radius: 0.5rem;
+      padding: 1rem;
+    }
+
 
     strong {
       font-weight: 600;
@@ -51,11 +54,13 @@ export const AccordionContainer = styled.section`
     }
 
     summary {
-      list-style: none;
-      display: grid;
-      grid-template-columns: 1fr 1.4fr;
-      grid-template-rows: 33px;
-      position: relative;
+      &.summary-parent {
+        list-style: none;
+        display: grid;
+        grid-template-columns: 1fr 1.4fr;
+        grid-template-rows: 33px;
+        position: relative;
+      }
 
       div {
         &.item-container {
@@ -101,8 +106,6 @@ export const ShowMoreButtonContainer = styled.button`
   div {
     svg {
       transform: scale(1.5);
-      /* width: 24px;
-      height: 20px; */
       color: var(--cyan-100);
     }
 

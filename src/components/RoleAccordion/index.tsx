@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { v1 as uuidv1 } from 'uuid';
 import { MdExpandMore } from 'react-icons/md';
 import { FiRefreshCcw} from 'react-icons/fi';
 import ActionAccordion from './ActionAccordion';
@@ -32,8 +33,8 @@ export default function RoleAccordion({ roles }: RoleAccordionProps) {
     <AccordionContainer>
       {
         roles.slice(0, quantityToShow).map((role) => (
-          <details>
-            <summary>
+          <details key={uuidv1()} className="details-parent">
+            <summary className='summary-parent'>
               <div className="item-container">
                 <strong>Cargo</strong>
                 <span>{role.name}</span>
