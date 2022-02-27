@@ -1,11 +1,11 @@
 import { v1 as uuidv1 } from 'uuid';
-import { role } from '../../types';
+import { Role } from '../../types';
 import { TableContainer } from './style';
 import TableBodyRow from './TableBodyRow'
 import { MdMoreVert } from 'react-icons/md'
 
 interface RoleTableProps {
-  roles: role[]
+  roles: Role[]
 }
 
 export default function RoleTable({ roles }: RoleTableProps) {
