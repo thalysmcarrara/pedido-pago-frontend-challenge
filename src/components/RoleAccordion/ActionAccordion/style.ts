@@ -34,6 +34,7 @@ export const ActionAccordionContainer = styled.div`
           display: none;
           position: absolute;
           right: 20px;
+          bottom: 21px;
         }
       }
 
@@ -48,6 +49,7 @@ export const ActionAccordionContainer = styled.div`
           svg {
             color: var(--cyan-300);
             transition: none;
+            position: static;
           }
 
           strong {

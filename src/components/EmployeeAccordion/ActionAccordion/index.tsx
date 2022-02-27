@@ -10,24 +10,24 @@ interface ActionAccordionProps {
 
 export default function ActionAccordion({ employeeId }: ActionAccordionProps) {
   return (
-    <ActionAccordionContainer className='details-button'>
+    <ActionAccordionContainer className="details-button">
       <details>
         <summary>
           <div className="summary-items-container">
             <FiFilePlus className='control-file-icon'/>
             <strong>Ações</strong>
           </div>
-          <MdClose className='control-expand-icon'/>
+          <MdClose className="control-expand-icon"/>
         </summary>
-        <div className='dropdown'>
+        <div className="dropdown">
           <Link href={`/employee/${employeeId}`}>
-            <a>
+            <a className="enabled">
               <MdOutlineVisibility />
               <span>Ver colaborador</span>
             </a>
           </Link>
           <Link href="/">
-            <a style={{pointerEvents: 'none'}}>
+            <a style={{pointerEvents: 'none'}} className="disabled">
               <FaRegTrashAlt />
               <span>Excluir</span>
             </a>

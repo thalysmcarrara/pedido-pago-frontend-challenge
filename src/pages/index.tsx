@@ -25,7 +25,7 @@ export default function Home({ employees }: HomeProps) {
         <h1>Organização</h1>
         <Hero>
           {/* nav mobile */}
-            <ActiveLinkMobile />
+            <ActiveLinkMobile currentPageName='Colaboradores' nextPageName='Cargos' nextPageLink='/cargos'/>
 
           {/* nav desktop */}
           <nav>
