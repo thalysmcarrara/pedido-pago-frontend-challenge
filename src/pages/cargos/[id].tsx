@@ -14,7 +14,7 @@ export default function RoleDetail({ role }: RoleDetailProps) {
   return (
       <Container>
         <div className="title-container">
-          <Link href="/">
+          <Link href="/cargos">
             <a><MdArrowBack /></a>
           </Link>
           <h1>Cargos e permissões</h1>
