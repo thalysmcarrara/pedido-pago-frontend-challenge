@@ -22,10 +22,6 @@ O Projeto possui a seguinte estrutura:
 │  │   └── employeeDetail.ts
 │  │   └── style.ts
 │  ├── types
-│  └── repository
-│     └── StrangerThings.js
-├── services
-│  └── StrangerThings.js
 ├── package-lock.json
 └── package.json
 ```
