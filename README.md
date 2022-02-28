@@ -42,6 +42,7 @@ O Projeto possui a seguinte estrutura:
   - react-testing-library
   - jest
 
-## Me contrata que eu sou bom! e modesto!
+## Me contrata que eu sou bom! e modesto. 🤟
+![](https://c.tenor.com/yZkIeMDcbsQAAAAS/fiesta-dance.gif)
 
 ![](https://media3.giphy.com/media/gLcUG7QiR0jpMzoNUu/giphy.gif?cid=ecf05e47wu68uvmvyl4wx87qodqdwn67hfm44ict3h0ah7oa&rid=giphy.gif&ct=g)
