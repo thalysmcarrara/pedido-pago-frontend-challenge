@@ -20,7 +20,7 @@ export default function Roles({ roles }: RolesProps) {
 
   return (
     <Container>
-      <h1>Cargos</h1>
+      <h1 data-testid="role-title">Cargos</h1>
       <Hero>
         {/* mobile nav */}
         <ActiveLinkMobile currentPageName='Cargos' nextPageName='Colaboradores' nextPageLink='/'/>
