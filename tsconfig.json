@@ -22,7 +22,12 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "incremental": true
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/components/*": ["src/components/*"],
+      "@/pages/*": ["src/pages/*"],
+    }
   },
   "exclude": [
     "node_modules"
