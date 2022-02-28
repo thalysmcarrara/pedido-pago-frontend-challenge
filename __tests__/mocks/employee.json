@@ -1,0 +1,29 @@
+[
+  {
+    "agent_id": 1,
+    "name": "Kai Cunha Lima",
+    "image": "https://picsum.photos/200",
+    "department": "Administrativo",
+    "branch": "Farmácia Pedido Pago",
+    "role": "Diretor",
+    "status": "active"
+  },
+  {
+    "agent_id": 2,
+    "name": "Kaua Gomes Castro",
+    "image": "https://picsum.photos/200",
+    "department": "Administrativo",
+    "branch": "Farmácia Pedido Pago",
+    "role": "Gerente",
+    "status": "inactive"
+  },
+  {
+    "agent_id": 3,
+    "name": "Brenda Cunha Pinto",
+    "image": "https://picsum.photos/200",
+    "department": "Comercial",
+    "branch": "Farmácia Pedido Pago",
+    "role": "Analista",
+    "status": "active"
+  }
+]  

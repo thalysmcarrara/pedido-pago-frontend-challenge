@@ -18,7 +18,7 @@ export default function EmployeePopover({ onRequestClose, employeeId }: Employee
   // }
   return (
     <PopoverContainer>
-      <div onClick={() => onRequestClose()}><MdClose /></div>
+      <div data-testid="close-popup-button" onClick={() => onRequestClose()}><MdClose /></div>
       <Link href={`/employee/${employeeId}`}>
         <a>
           <MdOutlineVisibility />

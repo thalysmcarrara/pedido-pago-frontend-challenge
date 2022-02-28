@@ -22,7 +22,7 @@ export default function TableBodyRow({ employee, isActive }: TableBodyRowProps) 
         <TableBodyRowActive>
           <td>
             <img src={employee.image} alt={employee.name} />
-            <span>{employee.name}</span>
+            <span data-testid="employee-name">{employee.name}</span>
           </td>
           <td>{employee.department}</td>
           <td>{employee.role}</td>
@@ -31,14 +31,14 @@ export default function TableBodyRow({ employee, isActive }: TableBodyRowProps) 
             <span>{employee.status}</span>
           </td>
           <td>
-            <MdMoreVert onClick={() => setIsOpenPopover(!isOpenPopOver)}/>
+            <MdMoreVert data-testid="popover-button" onClick={() => setIsOpenPopover(!isOpenPopOver)}/>
             {isOpenPopOver ? <EmployeePopover  employeeId={employee.agent_id} onRequestClose={onRequestClose} /> : ''}
           </td>
         </TableBodyRowActive> :
         <TableBodyRowInactive>
           <td>
             <img src={employee.image} alt={employee.name} />
-            <span>{employee.name}</span>
+            <span data-testid="employee-name">{employee.name}</span>
           </td>
           <td>{employee.department}</td>
           <td>{employee.role}</td>
@@ -46,8 +46,8 @@ export default function TableBodyRow({ employee, isActive }: TableBodyRowProps) 
           <td>
             <span>{employee.status}</span>
           </td>
-          <td onClick={() => setIsOpenPopover(!isOpenPopOver)}>
-            <MdMoreVert/>
+          <td>
+            <MdMoreVert data-testid="popover-button" onClick={() => setIsOpenPopover(!isOpenPopOver)}/>
             {isOpenPopOver ? <EmployeePopover  employeeId={employee.agent_id} onRequestClose={onRequestClose} /> : ''}
           </td>
         </TableBodyRowInactive>
