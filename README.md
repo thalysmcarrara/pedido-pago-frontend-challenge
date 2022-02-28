@@ -39,6 +39,7 @@ O Projeto possui a seguinte estrutura:
   - jest
 
 ## Me contrata que eu sou bom! e modesto. 🤟
-![](https://c.tenor.com/yZkIeMDcbsQAAAAS/fiesta-dance.gif)
 
-![](https://media3.giphy.com/media/gLcUG7QiR0jpMzoNUu/giphy.gif?cid=ecf05e47wu68uvmvyl4wx87qodqdwn67hfm44ict3h0ah7oa&rid=giphy.gif&ct=g)
+![](https://media4.giphy.com/media/yYSSBtDgbbRzq/giphy.gif?cid=790b76116303b9cd981b461fb1a0265bf408eadeeae84ead&rid=giphy.gif&ct=g)
+
+
