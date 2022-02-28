@@ -2,7 +2,6 @@ import { v1 as uuidv1 } from 'uuid';
 import { Role } from '../../types';
 import { TableContainer } from './style';
 import TableBodyRow from './TableBodyRow'
-import { MdMoreVert } from 'react-icons/md'
 
 interface RoleTableProps {
   roles: Role[]
@@ -22,14 +21,7 @@ export default function RoleTable({ roles }: RoleTableProps) {
       </thead>
       <tbody>
         {roles.map((role) => (
-          <TableBodyRow key={uuidv1()}>
-            <td>
-              <span>{role.name}</span>
-            </td>
-            <td>{role.departament}</td>
-            <td>{role.agents_quantity}</td>
-            <td><MdMoreVert /></td>
-          </TableBodyRow>
+          <TableBodyRow key={uuidv1()} role={role} />
         ))}
       </tbody>
     </TableContainer>

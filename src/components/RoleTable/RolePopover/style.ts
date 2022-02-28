@@ -6,7 +6,6 @@ export const PopoverContainer = styled.div`
   flex-direction: column;
   border: 2px solid var(--gray-400);
   width: 340px;
-  height: 132px;
   border-radius: 0.5rem;
   background-color: var(--white);
   z-index: 2;
@@ -30,7 +29,7 @@ export const PopoverContainer = styled.div`
 
   button, a {
     width: 100%;
-    height: 50%;
+    height: 50px;
     border: none;
     color: var(--black-100);
     font-size: 1rem;
@@ -48,6 +47,17 @@ export const PopoverContainer = styled.div`
     span {
       margin: 0 0 0 2.5rem;
     }
+  }
+
+  button {
+    &.disabled {
+      color: var(--gray-200);
+
+      svg {
+        color: var(--gray-200);
+      }
+    }
+    
   }
 
   button:last-child {
